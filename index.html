@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    
+    <style>
+        
+        body {
+            background-image: url('img/background.jpg'); 
+            background-size: cover;
+            text-align: center;
+        }
+        
+        a {
+            margin-left:50px;
+            margin-top: 10px;
+        }
+
+        .wrapper {
+            width: 400px;
+            margin-left: 475px;
+            margin-top: 100px;        
+        }
+
+        img {
+            width: 100%;
+        }
+
+    </style>
+
+
+
+    <title>BikeLight</title>
+</head>
+<body onclick="changeImage()">
+    
+    <!-- <nav class="ui three item menu">
+
+        <a class="item" href="index.html">BikeLight</a>
+        <a class="item" href="pageTwo.html">NODE??</a>
+        <a class="item" href="pageThree.html">crypto??</a>
+
+    </nav> -->
+
+    <div class="wrapper">
+        <img src="img/green.jpg" alt="">
+        <h1>Click image to randomize Pulse.</h1>
+    </div>
+
+
+
+<script>
+
+
+const pathNames = [
+        'img/green.jpg',
+        'img/red.jpg',
+    ];
+
+const myImageElement = document.body.querySelector('img');
+myImageElement.src = `${pathNames[1]}`;
+
+const changeImage = () => {
+
+    myImageElement.src = `${pathNames[Math.floor(Math.random()*pathNames.length)]}`;
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>
